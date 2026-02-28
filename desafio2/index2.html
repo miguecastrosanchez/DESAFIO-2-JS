@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Desafio 2</title>
+</head>
+<body>
+    <h1>Puedes llevar hasta 10 stickers en total</h1>
+    <div class="box_st">
+        <div class="st1">
+            <img src="./assets/img/sticker1.jpg" width="200" alt="">
+            <input type="number" id="st1">
+        </div>
+        <div class="st2">
+            <img src="./assets/img/sticker2.jpg" width="200" height="200" alt="">
+            <input type="number" id="st2">
+        </div>
+        <div class="st3">
+            <img src="./assets/img/sticker3.jpg" width="200" alt="">
+            <input type="number" id="st3">
+        </div>
+    </div>
+
+    <p id="msj_compra"></p>
+
+    <div class="boton">
+        <button id="compra" onclick="
+            
+            let st1 = Number(document.querySelector('#st1').value)
+            let st2 = Number(document.querySelector('#st2').value)
+            let st3 = Number(document.querySelector('#st3').value)
+            
+            console.log(st1, st2, st3)
+
+            let total = st1 + st2 + st3;
+            console.log(total)
+
+            if(total <= 10)
+            {
+                let msj = document.querySelector('#msj_compra')
+                msj.textContent = 'Llevas: '+total+' stickers';
+            } else 
+            {
+                let msj = document.querySelector('#msj_compra')
+                msj.textContent = 'Llevas demasiados stickers'
+            }
+            
+            ">Verificar</button>
+    </div>
+    
+  
+</body>
+</html>
