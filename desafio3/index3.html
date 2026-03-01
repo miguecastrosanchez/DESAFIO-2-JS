@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Desafio 3</title>
+</head>
+<body>
+    <div class="login">
+
+        <h1>Ingresa el password</h1>
+        
+        <div class="numeros">
+
+            <select name="dig1" id="dig1">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            </select>
+            <select name="dig2" id="dig2">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            </select>
+            <select name="dig3" id="dig3">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            </select>
+
+        </div>
+    
+        <button id="veri_pass" onclick="
+        
+        
+        let dig1 = document.querySelector('#dig1').value;
+        let dig2 = document.querySelector('#dig2').value;
+        let dig3 = document.querySelector('#dig3').value;
+
+        console.log(dig1, dig2, dig3)
+        
+        let pass = dig1 + dig2 + dig3 
+        
+        console.log(pass)
+        
+        if(pass == '911'){
+
+            let msj_pass = document.querySelector('#mensaje_pass');
+            msj_pass.textContent = ('Password 1 correcto')
+        }
+        else if (pass == '714'){
+
+            let msj_pass = document.querySelector('#mensaje_pass');
+            msj_pass.textContent = ('Password 2 correcto')
+        } else {
+
+            let msj_pass = document.querySelector('#mensaje_pass');
+            msj_pass.textContent = ('Password incorrecto')
+        }
+        
+        ">Ingresar</button>
+        
+        
+        <p id="mensaje_pass"></p>
+
+    </div>
+   
+</body>
+</html>
